@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <title>Document</title>
+</head>
+<body class="body2">
+    <header class="header">
+        <div class="sidenav">
+            <div onclick="sidenavopenclose()" class="menubars_icon"><i class="fa-solid fa-bars"></i></div>
+            <button class="header-button" onclick="Open()"><i class="fa-solid fa-user header-icons"></i></button>
+        </div>
+        <img src="Assets/Logos/logo.png">
+    </header>
+    <section id="admin-section">
+        <div class="sidebar" id="sidebar-div">
+            <a href="admin.html"><div class="menu nav-active">
+                <p><i class="fa-solid fa-chart-line sidebar_icons"></i><span>Dashboard</span></p>
+            </div></a>
+            <a href="Admin/orders.html"><div class="menu">
+                <p><i class="fa-solid fa-basket-shopping sidebar_icons"></i>Orders</p>
+            </div></a>
+            <div class="menu" onclick="sidebar_open(1)">
+                <p><i class="fa-solid fa-bag-shopping sidebar_icons"></i>Products</p>
+                <div class="sidemenu" id="submenu1">
+                    <div><a href="Admin/additems.html">Add Items</a></div>
+                    <div><a href="Admin/productlist.html">Product List</a></div>
+                </div>
+            </div>
+            <div class="menu" >
+                <a href="Admin/seller.html"><p><i class="fa-solid fa-shop sidebar_icons"></i>Seller</p></a>
+            </div>
+            <div class="menu">
+                <a href="Admin/tracking.html"><p><i class="fa-solid fa-truck-fast sidebar_icons"></i>Tracking</p></a>
+            </div>
+            <div class="menu">
+                <a href="Admin/setting.html"><p><i class="fa-solid fa-gear sidebar_icons"></i>Settings</p></a>
+            </div>
+            <div class="menu" onclick="Logout(1)">
+                <p><i class="fa-solid fa-right-from-bracket sidebar_icons"></i>Log out</p>
+            </div>
+        </div>
+        
+        <div class="content">
+            <div class="dashboard-box">
+                <div>
+                    <p class="dashboard-box-number">250</p>
+                    <p class="dashboard-box-names">All Users</p>
+                </div>
+                <i class="fa-solid fa-user-plus dashboardbox-icon"></i>
+            </div>
+            <div class="dashboard-box">
+                <div>
+                    <p class="dashboard-box-number">1,250</p>
+                    <p class="dashboard-box-names">Site Visitors</p>
+                </div>
+                <i class="fa-solid fa-globe dashboardbox-icon"></i>
+            </div>
+            <div class="dashboard-box">
+                <div>
+                    <p class="dashboard-box-number">₱20,500</p>
+                    <p class="dashboard-box-names">Total Sales</p>
+                </div>
+                <i class="fa-solid fa-money-bills dashboardbox-icon"></i>
+            </div>
+            <div class="dashboard-box">
+                <div>
+                    <p class="dashboard-box-number">520</p>
+                    <p class="dashboard-box-names">Total Orders</p>
+                </div>
+                <i class="fa-solid fa-cart-shopping dashboardbox-icon"></i>
+            </div>
+            <div class="dashboard-box">
+                <div class="chart-div">
+                    <h2>Sales</h2>
+                    <img class="chart1" src="Assets/Charts/Sales_Chart.png">
+                </div>
+            </div>
+            <div class="dashboard-box">
+                <div class="chart-div">
+                    <h2>User Hitrate</h2>
+                    <img class="chart2" src="Assets/Charts/User_Hitrate.png">
+                </div>
+            </div>
+            <div class="dashboard-box">
+                <div class="chart-div">
+                    <h2>Website Traffic</h2>
+                    <img class="chart3" src="Assets/Charts/Website_Traffic.png">
+                </div>
+            </div>
+            <div class="dashboard-box">
+                <div class="chart-div">
+                    <h2>Orders Hit</h2>
+                    <img class="chart4" src="Assets/Charts/Orders_Chart.png">
+                </div>
+            </div>
+         
+        </div>
+    </section>
+    <script src="main.js"></script>
+</body>
+</html>

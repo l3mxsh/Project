@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <title>Document</title>
+</head>
+<body class="body2"> 
+    <header class="header">
+        <div class="sidenav">
+            <div onclick="sidenavopenclose()" class="menubars_icon"><i class="fa-solid fa-bars"></i></div>
+            <button class="header-button" onclick="Open()"><i class="fa-solid fa-user header-icons"></i></button>
+        </div>
+        <img src="../Assets/Logos/logo.png">
+    </header>
+    <section id="admin-section">
+        <div class="sidebar" id="sidebar-div">
+            <a href="../admin.html"><div class="menu">
+                <p><i class="fa-solid fa-chart-line sidebar_icons"></i><span>Dashboard</span></p>
+            </div></a>
+            <a href="orders.html"><div class="menu">
+                <p><i class="fa-solid fa-basket-shopping sidebar_icons"></i>Orders</p>
+            </div></a>
+            <div class="menu" onclick="sidebar_open(1)">
+                <p><i class="fa-solid fa-bag-shopping sidebar_icons"></i>Products</p>
+                <div class="sidemenu" id="submenu1">
+                    <div><a href="additems.html">Add Items</a></div>
+                    <div><a href="productlist.html">Product List</a></div>
+                </div>
+            </div>
+            <div class="menu nav-active" >
+                <a href="seller.html"><p><i class="fa-solid fa-shop sidebar_icons"></i>Seller</p></a>
+            </div>
+            <div class="menu">
+                <a href="tracking.html"><p><i class="fa-solid fa-truck-fast sidebar_icons"></i>Tracking</p></a>
+            </div>
+            <div class="menu">
+                <a href="setting.html"><p><i class="fa-solid fa-gear sidebar_icons"></i>Settings</p></a>
+            </div>
+            <div class="menu" onclick="Logout()">
+                <p><i class="fa-solid fa-right-from-bracket sidebar_icons"></i>Log out</p>
+            </div>
+        </div>
+         
+        <div class="content seller_content">
+            <div class="overlay" id="overlay">
+                <div class="dialog" id="dialog">
+                  <p>Do you want to Edit?</p>
+                  <button class="yesno_button" onclick="autoclose()">Yes</button>
+                  <button class="yesno_button" onclick="autoclose()">No</button>
+                </div>
+            </div>
+            <h1 class="order_headtitle">Seller</h1>
+            <div class="dashboard-box content_seller">
+                <div class="dashboard-box seller_box">
+                        <div class="seller_img_div">
+                            <img class="seller_logo1" src="../Assets/Logos/Bape_Logo.png">
+                        </div>
+                    <div class="seller_div">
+                        <h2 class="brandname">A Bathing Ape</h2>
+                        <h2>Details</h2>
+                        <h3><i class="fa-solid fa-phone"></i> +63 2342 454 238</h3>
+                        <h3><i class="fa-solid fa-envelope"></i> abathing.ape@gmail.com</h3>
+                    </div>
+                    <button onclick="openDialog(5)" class="buttons">Edit</button>
+                </div>
+                <div class="dashboard-box seller_box">
+                    <div class="seller_img_div">
+                        <img class="seller_logo2" src="../Assets/Logos/Daily_Flight_Logo.png">
+                    </div>
+                    <div class="seller_div">
+                        <h2 class="brandname">Daily Flight</h2>
+                        <h2>Details</h2>
+                        <h3><i class="fa-solid fa-phone"></i> +63 5285 338 348</h3>
+                        <h3><i class="fa-solid fa-envelope"></i> daily_flight@gmail.com</h3>
+                    </div>
+                    <button onclick="openDialog(6)" class="buttons">Edit</button>
+                </div>
+            </div>
+            <div class="dashboard-box content_seller">
+                <div class="dashboard-box seller_box">
+                    <div class="seller_img_div">
+                        <img class="seller_logo3" src="../Assets/Logos/Highminds_Logo.png">
+                    </div>
+                    <div class="seller_div">
+                        <h2 class="brandname">Highminds</h2>
+                        <h2>Details</h2>
+                        <h3><i class="fa-solid fa-phone"></i> +63 8291 384 865</h3>
+                        <h3><i class="fa-solid fa-envelope"></i> hghmnds@gmail.com</h3>
+                    </div>
+                    <button onclick="openDialog(7)" class="buttons">Edit</button>
+                </div>
+                <div class="dashboard-box seller_box">
+                    <div class="seller_img_div">
+                        <img class="seller_logo4" src="../Assets/Logos/MNLA_Logo.png">
+                    </div>
+                    <div class="seller_div">
+                        <h2 class="brandname">MN+LA</h2>
+                        <h2>Details</h2>
+                        <h3><i class="fa-solid fa-phone"></i> +63 0927 308 710</h3>
+                        <h3><i class="fa-solid fa-envelope"></i> mn_la@gmail.com</h3>
+                    </div>
+                    <button onclick="openDialog(8)" class="buttons">Edit</button>
+                </div>
+            </div>
+            <div class="dashboard-box content_seller">
+                <div class="dashboard-box seller_box">
+                    <div class="seller_img_div">
+                        <img class="seller_logo5" src="../Assets/Logos/Stussy_Logo.png">
+                    </div>
+                    <div class="seller_div">
+                        <h2 class="brandname">Stussy</h2>
+                        <h2>Details</h2>
+                        <h3><i class="fa-solid fa-phone"></i> +63 4325 538 642</h3>
+                        <h3><i class="fa-solid fa-envelope"></i> stussy@gmail.com</h3>
+                    </div>
+                    <button onclick="openDialog(9)" class="buttons">Edit</button>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    <script src="../main.js"></script>
+</body>
+</html>

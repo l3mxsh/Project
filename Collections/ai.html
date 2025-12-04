@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="../main.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="nav-div">
+        <button onclick="navclose()"><i class="fa-solid fa-x"></i></button>
+        <input type="text" id="search-box">
+        <button class="header-button" onclick="search()"><i class="fa-solid fa-magnifying-glass header-icons"></i></button>
+        <nav class="nav-portrait">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="Jacket.html">Jacket</a></li>
+            <li><a href="Pants.html">Pants</a></li>
+            <li><a href="Shorts.html">Shorts</a></li>
+            <li><a href="T-Shirt.html">T-Shirt</a></li>
+        </nav>
+    </div>
+    <header class="header">
+        <img src="../Assets/Logos/logo.png">
+        <nav class="headernav">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="Jacket.html">Jacket</a></li>
+            <li><a href="Pants.html">Pants</a></li>
+            <li><a href="Shorts.html">Shorts</a></li>
+            <li><a href="T-Shirt.html">T-Shirt</a></li>
+        </nav>
+        <div class="sidenav">
+            <input type="text" id="search-box-landscape">
+            <button class="header-button search-icon" onclick="search()"><i class="fa-solid fa-magnifying-glass header-icons"></i></button>
+            <a href="../User/cart.html" id="cart_icon"><button class="header-button"><i class="fa-solid fa-cart-shopping header-icons"></i></button></a>
+            <div class="user_div">
+                <button class="header-button" onclick="Open()"><i class="fa-solid fa-user header-icons"></i></button>
+                <div id="usernav_div"></div>
+            </div>
+            <button class="header-button navmenu" onclick="navopen()"><i class="fa-solid fa-bars header-icons"></i></button>
+        </div>
+    </header>    
+    <section id="ai_section">
+        <div class="chat_div">
+            <div class="chart_header">
+                <h2>StyleGenie</h2>
+            </div>
+            <div class="chatbox">
+                <div class="chatmessage_div genie_div">
+                    <i class="fa-solid fa-robot ai_icons"></i>
+                    <div class="chatmessage genie_chat">
+                        <h4>Genie</h4>
+                        <p>Hi there! What can I suggest for you today?</p>
+                    </div>
+                </div>
+                <div class="chatmessage_div userchat_div">
+                    <i class="fa-solid fa-user ai_icons usericon"></i>
+                    <div class="chatmessage userchat_chat">
+                        <h4>User</h4>
+                        <p>Hi there! Can you suggest a basic outfit?</p>
+                    </div>
+                </div>
+                <div class="chatmessage_div genie_div">
+                    <i class="fa-solid fa-robot ai_icons"></i>
+                    <div class="chatmessage genie_chat">
+                        <h4>Genie</h4>
+                        <p>Of course! How about a <a class="outfit_suggest" href="Items.html?product=SHINOBI%20WINDSHELL%20V3">Shinobi windshell V3 jacket</a>,<br><a class="outfit_suggest" href="Items.html?product=OVER%20POCKET%20PHAT%20PANTS">Over pocket phat pants</a>, and a <a class="outfit_suggest" href="Items.html?product=RR%20SUN%20STRAIN">Rr Sun Strain t-shirt</a> ?<br>It's a timeless and stylish combo!</p>
+                    </div>
+                </div>
+                <div class="suggest-oufit">
+                    <a href="Items.html?product=SHINOBI%20WINDSHELL%20V3">
+                        <div class="products-div suggest_item_div">
+                            <img src="../Assets/Jackets/item5_1.png">
+                            <div class="product-name suggest_name">
+                                <h3>SHINOBI WINDSHELL V3</h3>
+                                <span>₱2770</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="Items.html?product=OVER%20POCKET%20PHAT%20PANTS">
+                        <div class="products-div suggest_item_div">
+                            <img src="../Assets/Pants/item1_1.png">
+                            <div class="product-name suggest_name">
+                                <h3>OVER POCKET PHAT PANTS</h3>
+                                <span>₱1770</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="Items.html?product=OVER%20POCKET%20PHAT%20PANTS">
+                        <div class="products-div suggest_item_div">
+                            <img src="../Assets/T_Shirts/item3_1.png">
+                            <div class="product-name suggest_name">
+                                <h3>RR SUN STRAIN</h3>
+                                <span>₱970</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="chatmessage_div userchat_div">
+                    <i class="fa-solid fa-user ai_icons usericon"></i>
+                    <div class="chatmessage userchat_chat">
+                        <h4>User</h4>
+                        <p>That sounds perfect! Thank you!</p>
+                    </div>
+                </div>
+                <div class="chatmessage_div genie_div">
+                    <i class="fa-solid fa-robot ai_icons"></i>
+                    <div class="chatmessage genie_chat">
+                        <h4>Genie</h4>
+                        <p>You're welcome! Enjoy styling your black and white outfit!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="chatgenie_box_div">
+                <input type="text" id="chatgenie_box">
+                <button class="arrowup"><i class="fa-solid fa-arrow-up"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="logo_footer_div">
+            <div class="logo-footer">
+                <img src="../Assets/Logos/logo.png">
+                <span>© 2024 Ast. All rights reserved.</span>
+            </div>
+        </div>
+    
+        <div class="footer-nav">
+            <a href="../index.html">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+        <div class="socials-div">
+            <h2 class="footer-head">STAY UPDATED!</h2>
+            <h3>Get exclusive offers and updates</h3>
+            <div class="email-div">
+                <input type="text" id="email-textbox" placeholder="Email">
+                <i class="fa-solid fa-arrow-right"></i>
+            </div>
+            <div class="socials-icons">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-telegram"></i></a>
+                <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+ 
+</body>
+</html>

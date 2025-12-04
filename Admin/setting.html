@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
+    <title>Document</title>
+</head>
+<body class="body2"> 
+    <header class="header">
+        <div class="sidenav">
+            <div onclick="sidenavopenclose()" class="menubars_icon"><i class="fa-solid fa-bars"></i></div>
+            <button class="header-button" onclick="Open()"><i class="fa-solid fa-user header-icons"></i></button>
+        </div>
+        <img src="../Assets/Logos/logo.png">
+    </header>
+    <section id="admin-section">
+        <div class="sidebar" id="sidebar-div">
+            <a href="../admin.html"><div class="menu">
+                <p><i class="fa-solid fa-chart-line sidebar_icons"></i><span>Dashboard</span></p>
+            </div></a>
+            <a href="orders.html"><div class="menu">
+                <p><i class="fa-solid fa-basket-shopping sidebar_icons"></i>Orders</p>
+            </div></a>
+            <div class="menu" onclick="sidebar_open(1)">
+                <p><i class="fa-solid fa-bag-shopping sidebar_icons"></i>Products</p>
+                <div class="sidemenu" id="submenu1">
+                    <div><a href="additems.html">Add Items</a></div>
+                    <div><a href="productlist.html">Product List</a></div>
+                </div>
+            </div>
+            <div class="menu" >
+                <a href="seller.html"><p><i class="fa-solid fa-shop sidebar_icons"></i>Seller</p></a>
+            </div>
+            <div class="menu">
+                <a href="tracking.html"><p><i class="fa-solid fa-truck-fast sidebar_icons"></i>Tracking</p></a>
+            </div>
+            <div class="menu nav-active">
+                <a href="setting.html"><p><i class="fa-solid fa-gear sidebar_icons"></i>Settings</p></a>
+            </div>
+            <div class="menu" onclick="Logout()">
+                <p><i class="fa-solid fa-right-from-bracket sidebar_icons"></i>Log out</p>
+            </div>
+        </div>
+         
+        <div class="content" id="content_orders">
+            <div class="overlay" id="overlay">
+                <div class="dialog" id="dialog">
+                  <p>Do you want to an Action?</p>
+                  <button class="yesno_button" onclick="autoclose()">Yes</button>
+                  <button class="yesno_button" onclick="autoclose()">No</button>
+                </div>
+            </div>
+            <h1 class="order_headtitle">Settings</h1>
+            <div class="dashboard-box setting_content">
+                <div class="settings_div">
+                    <h3>Order Updates</h3> 
+                    <input type="checkbox" id="allow_box"> 
+                </div>
+                <div class="settings_div">
+                    <h3>Email Notifications</h3> 
+                    <input type="checkbox" id="allow_box"> 
+                </div>
+                <div class="settings_div">
+                    <h3>Customer Survey</h3> 
+                    <input type="checkbox" id="allow_box"> 
+                </div>
+                <div class="settings_div">
+                    <h3>SMS Notifications</h3> 
+                    <input type="checkbox" id="allow_box"> 
+                </div>
+            </div>
+            <div class="dashboard-box setting_content">
+                <div class="settings_div">
+                    <h3>Allow to reset password</h3> 
+                    <input type="checkbox" id="allow_box"> 
+                </div>
+                <div class="settings_div">
+                    <h3>Push Notification</h3> 
+                    <input type="checkbox" id="allow_box"> 
+                </div>
+                <div class="settings_div">
+                    <h3>Allow creating new account</h3> 
+                    <input type="checkbox" id="allow_box"> 
+                </div>
+                <div class="settings_div">
+                    <h3>Language</h3> 
+                    <select class="select_lan">
+                        <option>English</option>
+                        <option>Filipino</option>
+                    </select> 
+                </div>
+            </div>
+            <h1 class="order_headtitle">User Roles</h1>
+            <table class="user_table">
+                <tr>
+                    <th>Username</th>
+                    <th>Password</th>
+                    <th>Email</th>
+                    <th>Role</th>
+                    <th>Status</th>
+                    <th>Date Created</th>
+                    <th>Last Login</th>
+                    <th>Order Count</th>
+                    <th>Action</th>
+                </tr>
+                <tr>
+                    <td>user1</td>
+                    <td>p*******</td>
+                    <td>user1@example.com</td>
+                    <td>
+                        <select class="role_select">
+                            <option selected>User</option>
+                            <option>Seller</option>
+                            <option>Admin</option>
+                        </select>
+                    </td>
+                    <td>Active</td>
+                    <td>2023-01-15</td>
+                    <td>2024-06-10</td>
+                    <td>23</td>
+                    <td class="orders_icon">
+                        <i onclick="openDialog(10)" class="fa-solid fa-trash"></i>
+                        <i onclick="openDialog(14)" class="fa-solid fa-ban"></i>
+                        <i onclick="openDialog(11)" class="fa-solid fa-pen-to-square"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td>stussy</td>
+                    <td>asd*232***</td>
+                    <td>stussy@example.com</td>
+                    <td>
+                        <select class="role_select">
+                            <option>User</option>
+                            <option selected>Seller</option>
+                            <option>Admin</option>
+                        </select>
+                    </td>
+                    <td>Active</td>
+                    <td>2023-02-20</td>
+                    <td>2024-06-12</td>
+                    <td>15</td>
+                    <td class="orders_icon">
+                        <i onclick="openDialog(10)" class="fa-solid fa-trash"></i>
+                        <i onclick="openDialog(14)" class="fa-solid fa-ban"></i>
+                        <i onclick="openDialog(11)" class="fa-solid fa-pen-to-square"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td>mn_la</td>
+                    <td>*d*9**ps3</td>
+                    <td>mn_la@example.com</td>
+                    <td>
+                        <select class="role_select">
+                            <option>User</option>
+                            <option selected>Seller</option>
+                            <option>Admin</option>
+                        </select>
+                    </td>
+                    <td>Active</td>
+                    <td>2023-12-01</td>
+                    <td>2024-07-02</td>
+                    <td>16</td>
+                    <td class="orders_icon">
+                        <i onclick="openDialog(10)" class="fa-solid fa-trash"></i>
+                        <i onclick="openDialog(14)" class="fa-solid fa-ban"></i>
+                        <i onclick="openDialog(11)" class="fa-solid fa-pen-to-square"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td>bathingape</td>
+                    <td>hsd5*9**ps3</td>
+                    <td>bathingape@example.com</td>
+                    <td>
+                        <select class="role_select">
+                            <option>User</option>
+                            <option selected>Seller</option>
+                            <option>Admin</option>
+                        </select>
+                    </td>
+                    <td>Active</td>
+                    <td>2024-01-15</td>
+                    <td>2024-07-05</td>
+                    <td>21</td>
+                    <td class="orders_icon">
+                        <i onclick="openDialog(10)" class="fa-solid fa-trash"></i>
+                        <i onclick="openDialog(14)" class="fa-solid fa-ban"></i>
+                        <i onclick="openDialog(11)" class="fa-solid fa-pen-to-square"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td>alice91</td>
+                    <td>t8@****5</td>
+                    <td>alice91@example.com</td>
+                    <td>
+                        <select class="role_select">
+                            <option>User</option>
+                            <option>Seller</option>
+                            <option selected>Admin</option>
+                        </select>
+                    </td>
+                    <td>Active</td>
+                    <td>2023-03-05</td>
+                    <td>2024-06-14</td>
+                    <td>10</td>
+                    <td class="orders_icon">
+                        <i onclick="openDialog(10)" class="fa-solid fa-trash"></i>
+                        <i onclick="openDialog(14)" class="fa-solid fa-ban"></i>
+                        <i onclick="openDialog(11)" class="fa-solid fa-pen-to-square"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td>bob24</td>
+                    <td>q1@****9</td>
+                    <td>bob24@example.com</td>
+                    <td>
+                        <select class="role_select">
+                            <option selected>User</option>
+                            <option>Seller</option>
+                            <option>Admin</option>
+                        </select>
+                    </td>
+                    <td>Active</td>
+                    <td>2023-04-10</td>
+                    <td>2024-06-16</td>
+                    <td>18</td>
+                    <td class="orders_icon">
+                        <i onclick="openDialog(10)" class="fa-solid fa-trash"></i>
+                        <i onclick="openDialog(14)" class="fa-solid fa-ban"></i>
+                        <i onclick="openDialog(11)" class="fa-solid fa-pen-to-square"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td>highminds</td>
+                    <td>s^4**3</td>
+                    <td>highminds@example.com</td>
+                    <td>
+                        <select class="role_select">
+                            <option>User</option>
+                            <option selected>Seller</option>
+                            <option>Admin</option>
+                        </select>
+                    </td>
+                    <td>Active</td>
+                    <td>2023-05-15</td>
+                    <td>2024-06-18</td>
+                    <td>22</td>
+                    <td class="orders_icon">
+                        <i onclick="openDialog(10)" class="fa-solid fa-trash"></i>
+                        <i onclick="openDialog(14)" class="fa-solid fa-ban"></i>
+                        <i onclick="openDialog(11)" class="fa-solid fa-pen-to-square"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td>charlie78</td>
+                    <td>n6%****8</td>
+                    <td>charlie78@example.com</td>
+                    <td>
+                        <select class="role_select">
+                            <option>User</option>
+                            <option>Seller</option>
+                            <option selected>Admin</option>
+                        </select>
+                    </td>
+                    <td>Active</td>
+                    <td>2023-06-20</td>
+                    <td>2024-06-20</td>
+                    <td>17</td>
+                    <td class="orders_icon">
+                        <i onclick="openDialog(10)" class="fa-solid fa-trash"></i>
+                        <i onclick="openDialog(14)" class="fa-solid fa-ban"></i>
+                        <i onclick="openDialog(11)" class="fa-solid fa-pen-to-square"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td>david45</td>
+                    <td>m9*7**h2</td>
+                    <td>david45@example.com</td>
+                    <td>
+                        <select class="role_select">
+                            <option selected>User</option>
+                            <option>Seller</option>
+                            <option>Admin</option>
+                        </select>
+                    </td>
+                    <td>Active</td>
+                    <td>2023-07-25</td>
+                    <td>2024-06-22</td>
+                    <td>12</td>
+                    <td class="orders_icon">
+                        <i onclick="openDialog(10)" class="fa-solid fa-trash"></i>
+                        <i onclick="openDialog(14)" class="fa-solid fa-ban"></i>
+                        <i onclick="openDialog(11)" class="fa-solid fa-pen-to-square"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td>eve67</td>
+                    <td>k5#***3f</td>
+                    <td>eve67@example.com</td>
+                    <td>
+                        <select class="role_select">
+                            <option>User</option>
+                            <option>Seller</option>
+                            <option selected>Admin</option>
+                        </select>
+                    </td>
+                    <td>Active</td>
+                    <td>2023-08-30</td>
+                    <td>2024-06-24</td>
+                    <td>20</td>
+                    <td class="orders_icon">
+                        <i onclick="openDialog(10)" class="fa-solid fa-trash"></i>
+                        <i onclick="openDialog(14)" class="fa-solid fa-ban"></i>
+                        <i onclick="openDialog(11)" class="fa-solid fa-pen-to-square"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td>dailyflight</td>
+                    <td>a34****sdh</td>
+                    <td>dailyflight@example.com</td>
+                    <td>
+                        <select class="role_select">
+                            <option>User</option>
+                            <option selected>Seller</option>
+                            <option>Admin</option>
+                        </select>
+                    </td>
+                    <td>Active</td>
+                    <td>2023-09-05</td>
+                    <td>2024-06-26</td>
+                    <td>25</td>
+                    <td class="orders_icon">
+                        <i onclick="openDialog(10)" class="fa-solid fa-trash"></i>
+                        <i onclick="openDialog(14)" class="fa-solid fa-ban"></i>
+                        <i onclick="openDialog(11)" class="fa-solid fa-pen-to-square"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td>frank21</td>
+                    <td>z8%****1</td>
+                    <td>frank21@example.com</td>
+                    <td>
+                        <select class="role_select">
+                            <option selected>User</option>
+                            <option>Seller</option>
+                            <option>Admin</option>
+                        </select>
+                    </td>
+                    <td>Active</td>
+                    <td>2023-10-10</td>
+                    <td>2024-06-28</td>
+                    <td>19</td>
+                    <td class="orders_icon">
+                        <i onclick="openDialog(10)" class="fa-solid fa-trash"></i>
+                        <i onclick="openDialog(14)" class="fa-solid fa-ban"></i>
+                        <i onclick="openDialog(11)" class="fa-solid fa-pen-to-square"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td>grace99</td>
+                    <td>y7&***4q</td>
+                    <td>grace99@example.com</td>
+                    <td>
+                        <select class="role_select">
+                            <option>User</option>
+                            <option>Seller</option>
+                            <option selected>Admin</option>
+                        </select>
+                    </td>
+                    <td>Active</td>
+                    <td>2023-11-15</td>
+                    <td>2024-06-30</td>
+                    <td>14</td>
+                    <td class="orders_icon">
+                        <i onclick="openDialog(10)" class="fa-solid fa-trash"></i>
+                        <i onclick="openDialog(14)" class="fa-solid fa-ban"></i>
+                        <i onclick="openDialog(11)" class="fa-solid fa-pen-to-square"></i>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+    </section>
+    <script src="../main.js"></script>
+</body>
+</html>

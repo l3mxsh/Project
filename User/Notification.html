@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<body class="body2">
+    <header class="header">
+        <div class="sidenav">
+            <div onclick="sidenavopenclose()" class="menubars_icon"><i class="fa-solid fa-bars"></i></div>
+            <button class="header-button" onclick="Open()"><i class="fa-solid fa-user header-icons"></i></button>
+        </div>
+        <img src="../Assets/Logos/logo.png">
+    </header>
+    <section id="admin-section">
+        <div class="sidebar" id="sidebar-div">
+            <div class="menu">
+                <a href="../user.html"><p><i class="fa-regular fa-user sidebar_icons"></i>Profile</p></a>
+            </div>
+            <div class="menu">
+                <a href="cart.html"><p><i class="fa-solid fa-cart-shopping sidebar_icons"></i>Cart </p></a>
+            </div>
+            <div class="menu" onclick="sidebar_open(1)">
+                <p><i class="fa-solid fa-gear sidebar_icons"></i>Settings</p>
+                <div class="sidemenu" id="submenu1">
+                    <div><a href="Accountsetting.html">Account</a></div>
+                    <div><a href="Notification.html">Notification</a></div>
+                </div>
+            </div>
+            <div class="menu">
+                <a href="../index.html"><p><i class="fa-solid fa-house sidebar_icons"></i> Home</p></a>
+            </div>
+            <div class="menu" onclick="Logout()">
+                <p><i class="fa-solid fa-right-from-bracket sidebar_icons"></i>Log out</p>
+            </div>
+        </div>
+        <div class="content cart_section" >
+            <h1 class="order_headtitle">Notification Settings</h1>
+            <div class="overlay" id="overlay">
+                <div class="dialog" id="dialog">
+                  <p>Do you want to an Edit?</p>
+                  <button class="yesno_button" onclick="autoclose()">Yes</button>
+                  <button class="yesno_button" onclick="autoclose()">No</button>
+                </div>
+            </div>
+            <div>
+                <div class="dashboard-box setting_content">
+                    <div class="settings_div">
+                        <h3>Order Updates</h3> 
+                        <input type="checkbox" id="allow_box"> 
+                    </div>
+                    <div class="settings_div">
+                        <h3>Email Notifications</h3> 
+                        <input type="checkbox" id="allow_box"> 
+                    </div>
+                    <div class="settings_div">
+                        <h3>Shop Notifications</h3> 
+                        <input type="checkbox" id="allow_box"> 
+                    </div>
+                    <div class="settings_div">
+                        <h3>SMS Notifications</h3> 
+                        <input type="checkbox" id="allow_box"> 
+                    </div>
+                </div>
+                <div class="dashboard-box setting_content">
+                    <div class="settings_div">
+                        <h3>Push Notification</h3> 
+                        <input type="checkbox" id="allow_box"> 
+                    </div>
+                    <div class="settings_div">
+                        <h3>Language</h3> 
+                        <select class="select_lan">
+                            <option>English</option>
+                            <option>Filipino</option>
+                        </select> 
+                    </div>
+                </div>
+        
+                
+            </div>
+        </div> 
+    </section>
+    <script src="../main.js"></script>
+</body>
+</html>

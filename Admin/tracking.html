@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <title>Document</title>
+</head>
+<body class="body2"> 
+    <header class="header">
+        <div class="sidenav">
+            <div onclick="sidenavopenclose()" class="menubars_icon"><i class="fa-solid fa-bars"></i></div>
+            <button class="header-button" onclick="Open()"><i class="fa-solid fa-user header-icons"></i></button>
+        </div>
+        <img src="../Assets/Logos/logo.png">
+    </header>
+    <section id="admin-section">
+        <div class="sidebar" id="sidebar-div">
+            <a href="../admin.html"><div class="menu">
+                <p><i class="fa-solid fa-chart-line sidebar_icons"></i><span>Dashboard</span></p>
+            </div></a>
+            <a href="orders.html"><div class="menu">
+                <p><i class="fa-solid fa-basket-shopping sidebar_icons"></i>Orders</p>
+            </div></a>
+            <div class="menu" onclick="sidebar_open(1)">
+                <p><i class="fa-solid fa-bag-shopping sidebar_icons"></i>Products</p>
+                <div class="sidemenu" id="submenu1">
+                    <div><a href="additems.html">Add Items</a></div>
+                    <div><a href="productlist.html">Product List</a></div>
+                </div>
+            </div>
+            <div class="menu" >
+                <a href="seller.html"><p><i class="fa-solid fa-shop sidebar_icons"></i>Seller</p></a>
+            </div>
+            <div class="menu nav-active">
+                <a href="tracking.html"><p><i class="fa-solid fa-truck-fast sidebar_icons"></i>Tracking</p></a>
+            </div>
+            <div class="menu">
+                <a href="setting.html"><p><i class="fa-solid fa-gear sidebar_icons"></i>Settings</p></a>
+            </div>
+            <div class="menu" onclick="Logout()">
+                <p><i class="fa-solid fa-right-from-bracket sidebar_icons"></i>Log out</p>
+            </div>
+        </div>
+        <div class="content" id="content_orders">
+            <h1 class="order_headtitle">Tracking Overview</h1>
+            <div class="tracking_overview">
+                <div class="dashboard-box"><h2>Total Shipments: 200</h2></div>
+                <div class="dashboard-box"><h2>In Transit: 50</h2></div>
+                <div class="dashboard-box"><h2>Delivered: 130</h2></div>
+                <div class="dashboard-box"><h2>Pending: 10</h2></div>
+                <div class="dashboard-box"><h2>Returned: 10</h2></div>
+            </div>
+            <table>
+                    <tr>
+                        <th>Tracking ID</th>
+                        <th>Order ID</th>
+                        <th>Customer Name</th>
+                        <th>Shipment Date</th>
+                        <th>Status</th>
+                        <th>Current Location</th>
+                    </tr>
+                    <tr>
+                        <td>TRK2983</td>
+                        <td>UID 9128</td>
+                        <td>John Doe</td>
+                        <td>2024-06-10</td>
+                        <td>In Transit</td>
+                        <td>Manila, Philippines</td>
+                    </tr>
+                    <tr>
+                        <td>TRK1357</td>
+                        <td>UID 9134</td>
+                        <td>Jane Smith</td>
+                        <td>2024-06-12</td>
+                        <td>Delivered</td>
+                        <td>Cebu City, Philippines</td>
+                    </tr>
+                    <tr>
+                        <td>TRK4592</td>
+                        <td>UID 9150</td>
+                        <td>Michael Reyes</td>
+                        <td>2024-06-14</td>
+                        <td>In Transit</td>
+                        <td>Davao City, Philippines</td>
+                    </tr>
+                    <tr>
+                        <td>TRK9865</td>
+                        <td>UID 9182</td>
+                        <td>Ana Gonzales</td>
+                        <td>2024-06-15</td>
+                        <td>Pending</td>
+                        <td>Quezon City, Philippines</td>
+                    </tr>
+                    <tr>
+                        <td>TRK6734</td>
+                        <td>UID 9193</td>
+                        <td>Chris Lim</td>
+                        <td>2024-06-16</td>
+                        <td>Returned</td>
+                        <td>Pasig, Philippines</td>
+                    </tr>
+                    <tr>
+                        <td>TRK8210</td>
+                        <td>UID 9204</td>
+                        <td>Maria Cruz</td>
+                        <td>2024-06-17</td>
+                        <td>Delivered</td>
+                        <td>Taguig, Philippines</td>
+                    </tr>
+                    <tr>
+                        <td>TRK3945</td>
+                        <td>UID 9215</td>
+                        <td>Carlos Santos</td>
+                        <td>2024-06-18</td>
+                        <td>In Transit</td>
+                        <td>Valenzuela, Philippines</td>
+                    </tr>
+                    <tr>
+                        <td>TRK5678</td>
+                        <td>UID 9226</td>
+                        <td>Luis Fernando</td>
+                        <td>2024-06-19</td>
+                        <td>Delivered</td>
+                        <td>Las Piñas, Philippines</td>
+                    </tr>
+                    <tr>
+                        <td>TRK2481</td>
+                        <td>UID 9237</td>
+                        <td>Isabel Ramirez</td>
+                        <td>2024-06-20</td>
+                        <td>Pending</td>
+                        <td>Makati, Philippines</td>
+                    </tr>
+                    <tr>
+                        <td>TRK9123</td>
+                        <td>UID 9248</td>
+                        <td>Ricardo Vega</td>
+                        <td>2024-06-21</td>
+                        <td>In Transit</td>
+                        <td>Mandaluyong, Philippines</td>
+                    </tr>
+                    <tr>
+                        <td>TRK3045</td>
+                        <td>UID 9259</td>
+                        <td>Elena Flores</td>
+                        <td>2024-06-22</td>
+                        <td>Delivered</td>
+                        <td>San Juan, Philippines</td>
+                    </tr>
+                    <tr>
+                        <td>TRK7801</td>
+                        <td>UID 9260</td>
+                        <td>Pedro Marquez</td>
+                        <td>2024-06-23</td>
+                        <td>Returned</td>
+                        <td>Parañaque, Philippines</td>
+                    </tr>
+            </table>
+        
+        </div>
+        
+    </section>
+    <script src="../main.js"></script>
+</body>
+</html>

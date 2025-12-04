@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="../main.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="nav-div">
+        <button onclick="navclose()"><i class="fa-solid fa-x"></i></button>
+        <input type="text" id="search-box">
+        <button class="header-button" onclick="search()"><i class="fa-solid fa-magnifying-glass header-icons"></i></button>
+        <nav class="nav-portrait">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="Jacket.html">Jacket</a></li>
+            <li><a href="Pants.html">Pants</a></li>
+            <li><a href="Shorts.html">Shorts</a></li>
+            <li><a href="T-Shirt.html">T-Shirt</a></li>
+        </nav>
+    </div>
+    <header class="header">
+        <img src="../Assets/Logos/logo.png">
+        <nav class="headernav">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="Jacket.html">Jacket</a></li>
+            <li><a href="Pants.html">Pants</a></li>
+            <li><a href="Shorts.html">Shorts</a></li>
+            <li><a href="T-Shirt.html">T-Shirt</a></li>
+        </nav>
+        <div class="sidenav">
+            <input type="text" id="search-box-landscape">
+            <button class="header-button search-icon" onclick="search()"><i class="fa-solid fa-magnifying-glass header-icons"></i></button>
+            <a href="../User/cart.html" id="cart_icon"><button class="header-button"><i class="fa-solid fa-cart-shopping header-icons"></i></button></a>
+            <div class="user_div">
+                <button class="header-button" onclick="Open()"><i class="fa-solid fa-user header-icons"></i></button>
+                <div id="usernav_div"></div>
+            </div>
+            <button class="header-button navmenu" onclick="navopen()"><i class="fa-solid fa-bars header-icons"></i></button>
+        </div>
+    </header>
+    <div id="Items_div"></div>
+    <footer>
+        <div class="logo_footer_div">
+            <div class="logo-footer">
+                <img src="../Assets/Logos/logo.png">
+                <span>© 2024 Ast. All rights reserved.</span>
+            </div>
+        </div>
+    
+        <div class="footer-nav">
+            <a href="../index.html">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+        <div class="socials-div">
+            <h2 class="footer-head">STAY UPDATED!</h2>
+            <h3>Get exclusive offers and updates</h3>
+            <div class="email-div">
+                <input type="text" id="email-textbox" placeholder="Email">
+                <i class="fa-solid fa-arrow-right"></i>
+            </div>
+            <div class="socials-icons">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-telegram"></i></a>
+                <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script>AllItems(4)
+        checker()
+    </script>
+   
+</body>
+</html>

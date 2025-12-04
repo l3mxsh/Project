@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <title>Document</title>
+</head>
+<body class="body2"> 
+    <header class="header">
+        <div class="sidenav">
+            <div onclick="sidenavopenclose()" class="menubars_icon"><i class="fa-solid fa-bars"></i></div>
+            <button class="header-button" onclick="Open()"><i class="fa-solid fa-user header-icons"></i></button>
+        </div>
+        <img src="../Assets/Logos/logo.png">
+    </header>
+    <section id="admin-section">
+        <div class="sidebar" id="sidebar-div">
+            <a href="../admin.html"><div class="menu">
+                <p><i class="fa-solid fa-chart-line sidebar_icons"></i><span>Dashboard</span></p>
+            </div></a>
+            <a href="orders.html"><div class="menu nav-active">
+                <p><i class="fa-solid fa-basket-shopping sidebar_icons"></i>Orders</p>
+            </div></a>
+            <div class="menu" onclick="sidebar_open(1)">
+                <p><i class="fa-solid fa-bag-shopping sidebar_icons"></i>Products</p>
+                <div class="sidemenu" id="submenu1">
+                    <div><a href="additems.html">Add Items</a></div>
+                    <div><a href="productlist.html">Product List</a></div>
+                </div>
+            </div>
+            <div class="menu" >
+                <a href="seller.html"><p><i class="fa-solid fa-shop sidebar_icons"></i>Seller</p></a>
+            </div>
+            <div class="menu">
+                <a href="tracking.html"><p><i class="fa-solid fa-truck-fast sidebar_icons"></i>Tracking</p></a>
+            </div>
+            <div class="menu">
+                <a href="setting.html"><p><i class="fa-solid fa-gear sidebar_icons"></i>Settings</p></a>
+            </div>
+            <div class="menu" onclick="Logout()">
+                <p><i class="fa-solid fa-right-from-bracket sidebar_icons"></i>Log out</p>
+            </div>
+        </div>
+        <div class="content" id="content_orders">
+            <h1 class="order_headtitle">Orders</h1>
+            <div class="dashboard-box">
+                <table id="product-table">
+                    <tr>
+                        <th>Select</th>
+                        <th>Order ID</th>
+                        <th>User ID</th>
+                        <th>Status</th>
+                        <th>Order Date</th>
+                        <th>Customer Name</th>
+                        <th>Payment Method</th>
+                        <th>Order Total</th>
+                        <th>Actions</th>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="selection" id="check_box"></td>
+                        <td>#1244</td>
+                        <td>UID 1029</td>
+                        <td>Pending</td>
+                        <td>02/24/24</td>
+                        <td>John Mark</td>
+                        <td>Gcash</td>
+                        <td>₱2017</td>
+                        <td class="orders_icon"><i onclick="openDialog(0)" class="fa-solid fa-trash"></i></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="selection" id="check_box"></td>
+                        <td>#1245</td>
+                        <td>UID 1030</td>
+                        <td>Shipped</td>
+                        <td>02/25/24</td>
+                        <td>Jane Smith</td>
+                        <td>Credit Card</td>
+                        <td>₱1500</td>
+                        <td class="orders_icon"><i onclick="openDialog(0)" class="fa-solid fa-trash"></i></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="selection" id="check_box"></td>
+                        <td>#1246</td>
+                        <td>UID 1031</td>
+                        <td>Processing</td>
+                        <td>02/26/24</td>
+                        <td>Michael Brown</td>
+                        <td>PayPal</td>
+                        <td>₱800</td>
+                        <td class="orders_icon"><i onclick="openDialog(0)" class="fa-solid fa-trash"></i></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="selection" id="check_box"></td>
+                        <td>#1247</td>
+                        <td>UID 1032</td>
+                        <td>Cancelled</td>
+                        <td>02/27/24</td>
+                        <td>Emily Johnson</td>
+                        <td>Bank Transfer</td>
+                        <td>₱500</td>
+                        <td class="orders_icon"><i onclick="openDialog(0)" class="fa-solid fa-trash"></i></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="selection" id="check_box"></td>
+                        <td>#1248</td>
+                        <td>UID 1033</td>
+                        <td>Delivered</td>
+                        <td>02/28/24</td>
+                        <td>David Lee</td>
+                        <td>COD</td>
+                        <td>₱1200</td>
+                        <td class="orders_icon"><i onclick="openDialog(0)" class="fa-solid fa-trash"></i></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="selection" id="check_box"></td>
+                        <td>#1249</td>
+                        <td>UID 1034</td>
+                        <td>Pending</td>
+                        <td>03/01/24</td>
+                        <td>Sarah Clark</td>
+                        <td>Credit Card</td>
+                        <td>₱1800</td>
+                        <td class="orders_icon"><i onclick="openDialog(0)" class="fa-solid fa-trash"></i></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="selection" id="check_box"></td>
+                        <td>#1250</td>
+                        <td>UID 1035</td>
+                        <td>Shipped</td>
+                        <td>03/02/24</td>
+                        <td>Robert Green</td>
+                        <td>PayPal</td>
+                        <td>₱900</td>
+                        <td class="orders_icon"><i onclick="openDialog(0)" class="fa-solid fa-trash"></i></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="selection" id="check_box"></td>
+                        <td>#1251</td>
+                        <td>UID 1036</td>
+                        <td>Processing</td>
+                        <td>03/03/24</td>
+                        <td>Linda White</td>
+                        <td>Bank Transfer</td>
+                        <td>₱700</td>
+                        <td class="orders_icon"><i onclick="openDialog(0)" class="fa-solid fa-trash"></i></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="selection" id="check_box"></td>
+                        <td>#1252</td>
+                        <td>UID 1037</td>
+                        <td>Delivered</td>
+                        <td>03/04/24</td>
+                        <td>Christopher Davis</td>
+                        <td>COD</td>
+                        <td>₱1300</td>
+                        <td class="orders_icon"><i onclick="openDialog(0)" class="fa-solid fa-trash"></i></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="selection" id="check_box"></td>
+                        <td>#1253</td>
+                        <td>UID 1038</td>
+                        <td>Cancelled</td>
+                        <td>03/05/24</td>
+                        <td>Emma Martinez</td>
+                        <td>Credit Card</td>
+                        <td>₱550</td>
+                        <td class="orders_icon"><i onclick="openDialog(0)" class="fa-solid fa-trash"></i></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="selection" id="check_box"></td>
+                        <td>#1254</td>
+                        <td>UID 1039</td>
+                        <td>Pending</td>
+                        <td>03/06/24</td>
+                        <td>William Taylor</td>
+                        <td>PayPal</td>
+                        <td>₱950</td>
+                        <td class="orders_icon"><i onclick="openDialog(0)" class="fa-solid fa-trash"></i></td>
+                        
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="selection" id="check_box"></td>
+                        <td>#1255</td>
+                        <td>UID 1040</td>
+                        <td>Shipped</td>
+                        <td>03/07/24</td>
+                        <td>Sophia Garcia</td>
+                        <td>Bank Transfer</td>
+                        <td>₱750</td>
+                        <td class="orders_icon"><i onclick="openDialog(0)" class="fa-solid fa-trash"></i></td>
+        
+                    </tr>
+                </table>
+            </div>
+            <button type="submit" onclick="openDialog(1);" class="buttons">Delete</button>
+            <div class="overlay" id="overlay">
+                <div class="dialog" id="dialog"></div>
+            </div>
+        </div>
+        
+    </section>
+    <script src="../main.js"></script>
+</body>
+</html>

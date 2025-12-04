@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="main.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="nav-div">
+        <button onclick="navclose()"><i class="fa-solid fa-x"></i></button>
+        <input type="text" id="search-box">
+        <button class="header-button" onclick="search()"><i class="fa-solid fa-magnifying-glass header-icons"></i></button>
+        <nav class="nav-portrait">
+            <li><a class="nav-active" href="index.html">Home</a></li>
+            <li><a href="Collections/Jacket.html">Jacket</a></li>
+            <li><a href="Collections/Pants.html">Pants</a></li>
+            <li><a href="Collections/Shorts.html">Shorts</a></li>
+            <li><a href="Collections/T-Shirt.html">T-Shirt</a></li>
+        </nav>
+    </div>
+    <header class="header">
+        <img src="Assets/Logos/logo.png">
+        <nav class="headernav">
+            <li><a class="nav-active" href="#">Home</a></li>
+            <li><a href="Collections/Jacket.html">Jacket</a></li>
+            <li><a href="Collections/Pants.html">Pants</a></li>
+            <li><a href="Collections/Shorts.html">Shorts</a></li>
+            <li><a href="Collections/T-Shirt.html">T-Shirt</a></li>
+        </nav>
+        <div class="sidenav">
+            <input type="text" id="search-box-landscape">
+            <button class="header-button search-icon" onclick="search()"><i class="fa-solid fa-magnifying-glass header-icons"></i></button>
+            <a href="User/cart.html" id="cart_icon"><button class="header-button"><i class="fa-solid fa-cart-shopping header-icons"></i></button></a>
+            <div class="user_div">
+                <button class="header-button" onclick="Open(0)"><i class="fa-solid fa-user header-icons"></i></button>
+                <div id="usernav_div"></div>
+            </div>
+            <button class="header-button navmenu" onclick="navopen()"><i class="fa-solid fa-bars header-icons"></i></button>
+        </div>
+    </header>
+    <section id="home">
+        <div class="welcome-div">
+            <div class="welcome-text">
+                <h1 class="font-anton">Lost on style?</h1>
+                <p>Explore the latest styles. Let our AI find your perfect outfit!</p>
+                <a href="Collections/ai.html"><button id="shop-btn">Explore with AI</button></a>
+            </div>
+        </div>
+    </section>
+    <div class="banner">
+        <span>Free Shipping</span>
+        <span>50% OFF</span>
+        <span>Free Shipping</span>
+        <span>50% OFF</span>
+        <span>Free Shipping</span>
+        <span>50% OFF</span>
+        <span>Free Shipping</span>
+        <span>50% OFF</span>
+        <span>Free Shipping</span>
+        <span>50% OFF</span>
+    </div>
+    <section id="collections">
+        <h1 class="font-anton">Collections</h1>
+        <div class="collections-parent-div">
+            <a href="Collections/Jacket.html" class="jacket-div">
+                <h2>Jacket</h2>
+            </a>
+            <a href="Collections/Pants.html" class="pants-div">
+                <h2>Pants</h2>
+            </a>
+            <a href="Collections/Shorts.html" class="short-div">
+                <h2>Short</h2>
+            </a>
+            <a href="Collections/T-Shirt.html" class="tshirt-div">
+                <h2>T-Shirt</h2>
+            </a>
+        </div>
+    </section>
+   
+    <section id="trending-div" class="services">
+        <h1>Trending Now</h1>
+        <div class="trending-products">
+            <a href="Collections/Items.html?product=ASIA%20CAMO%20ZIP%20JACKET">
+                <div class="products-div">
+                    <img src="Assets/Jackets/item10_1.png">
+                    <div class="product-name">
+                        <h3>ASIA CAMO ZIP JACKET</h3>
+                        <span>₱2770</span>
+                    </div>
+                </div>
+            </a>
+            <a href="Collections/Items.html?product=INSIDER%20IN%20PALE%20PURPLE">
+                <div class="products-div">
+                    <img src="Assets/T_Shirts/item0_1.png">
+                    <div class="product-name">
+                        <h3>INSIDER IN PALE PURPLE</h3>
+                        <span>₱870</span>
+                    </div>
+                </div>
+            </a>
+            <a href="Collections/Items.html?product=CHINO%20WORK%20SHORT">
+                <div class="products-div">
+                    <img src="Assets/Shorts/item16_1.png">
+                    <div class="product-name">
+                        <h3>CHINO WORK SHORT</h3>
+                        <span>₱870</span>
+                    </div>
+                </div>
+            </a>
+            <a href="Collections/Items.html?product=ONE%20POINT%20EASY%202%20PLEAT%20DENIM%20PANTS">
+                <div class="products-div">
+                    <img src="Assets/Pants/item5_1.png">
+                    <div class="product-name">
+                        <h3>ONE POINT EASY 2 PLEAT DENIM PANTS</h3>
+                        <span>₱1570</span>
+                    </div>
+                </div>
+            </a>
+            <a href="Collections/Items.html?product=INK%20CAMO%20SHARK%20ZIP%20HOODIE">
+                <div class="products-div">
+                    <img src="Assets/Jackets/item12_1.png">
+                    <div class="product-name">
+                        <h3>INK CAMO SHARK ZIP HOODIE</h3>
+                        <span>₱2570</span>
+                    </div>
+                </div>
+            </a>
+            <a href="Collections/Items.html?product=OG%20APE%20HEAD%20COLLEGE%20FIT%20TEE">
+                <div class="products-div">
+                    <img src="Assets/T_Shirts/item11_1.png">
+                    <div class="product-name">
+                        <h3>OG APE HEAD COLLEGE FIT TEE</h3>
+                        <span>₱2770</span>
+                    </div>
+                </div>
+            </a>
+            <a href="Collections/Items.html?product=VENUS%20OVAL%20TEE%20PIGMENT%20DYED">
+                <div class="products-div">
+                    <img src="Assets/T_Shirts/item16_1.png">
+                    <div class="product-name">
+                        <h3>VENUS OVAL TEE PIGMENT DYED</h3>
+                        <span>₱970</span>
+                    </div>
+                </div>
+            </a>
+            <a href="Collections/Items.html?product=All%20Star%20Trackpants">
+                <div class="products-div">
+                    <img src="Assets/Pants/item19_1.png">
+                    <div class="product-name">
+                        <h3>All Star Trackpants</h3>
+                        <span>₱1000</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
+    <section id="latest-div" class="services">
+        <h1>Latest</h1>
+        <div class="latest-products">
+            <a href="Collections/Items.html?product=CORDUROY%20WIDE%20PANTS%20IN%20IRON%20ORE">
+                <div class="products-div">
+                    <img src="Assets/Pants/item2_1.png">
+                    <div class="product-name">
+                        <h3>CORDUROY WIDE PANTS IN IRON ORE</h3>
+                        <span>₱1470</span>
+                    </div>
+                </div>
+            </a>
+            <a href="Collections/Items.html?product=M%24%20ARTIFACT%20II%20HOODIE">
+                <div class="products-div">
+                    <img src="Assets/Jackets/item6_1.png">
+                    <div class="product-name">
+                        <h3>M$ ARTIFACT II HOODIE</h3>
+                        <span>₱1870</span>
+                    </div>
+                </div>
+            </a>
+            <a href="Collections/Items.html?product=SMOOTH%20STOCK%20HOODIE%20PIGMENT%20DYED">
+                <div class="products-div">
+                    <img src="Assets/Jackets/item16_1.png">
+                    <div class="product-name">
+                        <h3>SMOOTH STOCK HOODIE PIGMENT DYED</h3>
+                        <span>₱2770</span>
+                    </div>
+                </div>
+            </a>
+            <a href="Collections/Items.html?product=HIKE%20SHORTS%20IN%20NAVY">
+                <div class="products-div">
+                    <img src="Assets/Shorts/item6_1.png">
+                    <div class="product-name">
+                        <h3>HIKE SHORTS IN NAVY</h3>
+                        <span>₱1170</span>
+                    </div>
+                </div>
+            </a>
+            <a href="Collections/Items.html?product=BAPE%2031ST%20ANNIV%20APE%20HEAD%20TEE">
+                <div class="products-div">
+                    <img src="Assets/T_Shirts/item14_1.png">
+                    <div class="product-name">
+                        <h3>BAPE 31ST ANNIV APE HEAD TEE</h3>
+                        <span>₱3870</span>
+                    </div>
+                </div>
+            </a>
+            <a href="Collections/Items.html?product=DF%20ESSENTIAL%20SWEATSHORTS%20IN%20MAROON">
+                <div class="products-div">
+                    <img src="Assets/Shorts/item1_1.png">
+                    <div class="product-name">
+                        <h3>DF ESSENTIAL SWEATSHORTS IN MAROON</h3>
+                        <span>₱870</span>
+                    </div>
+                </div>
+            </a>
+            <a href="Collections/Items.html?product=WORK%20JACKET%20UNLINED%20PLAID">
+                <div class="products-div">
+                    <img src="Assets/Jackets/item15_1.png">
+                    <div class="product-name">
+                        <h3>WORK JACKET UNLINED PLAID</h3>
+                        <span>₱1570</span>
+                    </div>
+                </div>
+            </a>
+            <a href="Collections/Items.html?product=All%20Star%20Trackpants">
+                <div class="products-div">
+                    <img src="Assets/T_Shirts/item4_1.png">
+                    <div class="product-name">
+                        <h3>WISDOM RUST</h3>
+                        <span>₱870</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <a href="Collections/All.html"><button id="view-all-btn">View All</button></a>
+    </section>
+    <hr>
+    <section id="brands">
+        <h1>Brands</h1>
+        <div class="brands-img">
+            <img id="logo1" src="Assets/Logos/Daily_Flight_Logo.png">
+            <img id="logo2" src="Assets/Logos/MNLA_Logo.png">
+            <img id="logo3" src="Assets/Logos/Stussy_Logo.png">
+            <img id="logo4" src="Assets/Logos/Bape_Logo.png">
+            <img id="logo5" src="Assets/Logos/Highminds_Logo.png">
+        </div>
+    </section>
+    <footer>
+            <div class="logo_footer_div">
+                <div class="logo-footer">
+                    <img src="Assets/Logos/logo.png">
+                    <span>© 2024 Ast. All rights reserved.</span>
+                </div>
+            </div>
+        
+            <div class="footer-nav">
+                <a href="index.html">Home</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </div>
+            <div class="socials-div">
+                <h2 class="footer-head">STAY UPDATED!</h2>
+                <h3>Get exclusive offers and updates</h3>
+                <div class="email-div">
+                    <input type="text" id="email-textbox" placeholder="Email">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+                <div class="socials-icons">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-telegram"></i></a>
+                    <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
+                </div>
+            </div>
+    </footer>
+    <script>checker()</script>
+</body>
+</html>
