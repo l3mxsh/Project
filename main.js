@@ -1091,8 +1091,8 @@ function Account(){
                             </div>
                             <div class="details_div">
                                 <div>
-                                    <span  class="labels">Baranggay</span><br>
-                                    <input type="text" id="baranggay_textbox" class="login_textbox fullname_box" required>
+                                    <span  class="labels">barangay</span><br>
+                                    <input type="text" id="barangay_textbox" class="login_textbox fullname_box" required>
                                 </div>
                                 <div>
                                     <span class="labels">Recovery Password</span><br>
@@ -1212,7 +1212,7 @@ function Create_Acccount(){
     var lastname = document.getElementById('lastname_textbox').value;
     var province = document.getElementById('province_textbox').value;
     var city = document.getElementById('city_textbox').value;
-    var baranggay = document.getElementById('baranggay_textbox').value;
+    var barangay = document.getElementById('barangay_textbox').value;
     var username = document.getElementById('signup_username_textbox').value;
     var recovery_textbox = document.getElementById('recovery_textbox').value;
     var password_textbox = document.getElementById('signup_password_textbox').value;
@@ -1229,7 +1229,7 @@ function Create_Acccount(){
         lastname : lastname,
         province : province,
         city : city,
-        baranggay : baranggay,
+        barangay : barangay,
         username : username,
         password : password_textbox,
         recovery : recovery_textbox,
@@ -1631,7 +1631,7 @@ function openDialog(target_dialog,pname,prname,pd1,pd2,pd3) {
                         </tr>
                         <tr>
                             <th>Barangay</th>
-                            <td><input type="text" value="${users_data[userstatus[0]].baranggay}" required></td>
+                            <td><input type="text" value="${users_data[userstatus[0]].barangay}" required></td>
                         </tr>
                         <tr>
                             <th>City</th>
@@ -1738,7 +1738,7 @@ function User(){
     console.log();
     username_td.innerText = users_data[userstatus[0]].username;
     name_td.innerText = users_data[userstatus[0]].firstname + " " + users_data[userstatus[0]].lastname;
-    address_td.innerText = users_data[userstatus[0]].baranggay + ", " + users_data[userstatus[0]].city + ", " + users_data[userstatus[0]].province;
+    address_td.innerText = users_data[userstatus[0]].barangay + ", " + users_data[userstatus[0]].city + ", " + users_data[userstatus[0]].province;
 }
 
 var items_detail = JSON.parse(localStorage.getItem('UserCart_Items'))
